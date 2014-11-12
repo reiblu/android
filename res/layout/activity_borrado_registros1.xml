@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:text="@string/dni" >
+            android:hint="@string/dni" >
 
             <requestFocus />
         </EditText>
@@ -67,7 +67,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:text="@string/nombre" />
+            android:hint="@string/nombre" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -90,7 +91,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:text="@string/apellidos" />
+            android:hint="@string/apellidos" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -113,7 +115,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:text="@string/direccion" />
+            android:hint="@string/direccion" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -136,7 +139,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:text="@string/telefono" />
+            android:hint="@string/telefono" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -159,7 +163,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:text="@string/equipo" />
+            android:hint="@string/equipo" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -172,7 +177,9 @@
             android:id="@+id/imageButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="borrar"
             android:src="@drawable/eliminar" />
+
     </LinearLayout>
 
 </LinearLayout>

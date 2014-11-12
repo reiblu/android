@@ -44,8 +44,39 @@ public class Principal extends Activity {
 		tipo = 1;
 		EditText texto = (EditText) findViewById(R.id.editText1);
 		String dni = texto.getText().toString();
-		new ConsultaBD().execute(dni);
+		if (dni.equals("")) {
 
+			Toast.makeText(Principal.this, "Debe introducir un DNI",
+					Toast.LENGTH_LONG).show();
+		} else {
+			new ConsultaBD().execute(dni);
+		}
+	}
+	
+	public void modificar(View v) {
+		tipo = 2;
+		EditText texto = (EditText) findViewById(R.id.editText1);
+		String dni = texto.getText().toString();
+		if (dni.equals("")) {
+
+			Toast.makeText(Principal.this, "Debe introducir un DNI",
+					Toast.LENGTH_LONG).show();
+		} else {
+			new ConsultaBD().execute(dni);
+		}
+	}
+	
+	public void borrar(View v) {
+		tipo = 3;
+		EditText texto = (EditText) findViewById(R.id.editText1);
+		String dni = texto.getText().toString();
+		if (dni.equals("")) {
+
+			Toast.makeText(Principal.this, "Debe introducir un DNI",
+					Toast.LENGTH_LONG).show();
+		} else {
+			new ConsultaBD().execute(dni);
+		}
 	}
 
 	private class ConsultaBD extends AsyncTask<String, Void, String> {
@@ -99,18 +130,12 @@ public class Principal extends Activity {
 				} else if (id == 0 && tipo == 1) {
 					EditText texto = (EditText) findViewById(R.id.editText1);
 					String dni = texto.getText().toString();
-					Log.d("practica", dni);
-					if (dni=="") {
-
-						Toast.makeText(getBaseContext(), "Debe introducir un DNI",
-								Toast.LENGTH_LONG).show();
-					} else {
-						Intent nextScreen = new Intent(Principal.this,
+					Intent nextScreen = new Intent(Principal.this,
 								InserccionRegistros.class);
-						nextScreen.putExtra("dni", dni);
-						startActivityForResult(nextScreen, resultado1);
+					nextScreen.putExtra("dni", dni);
+					startActivityForResult(nextScreen, resultado1);
 
-					}
+					
 
 				} else if (id == 1 && tipo == 1) {
 
@@ -124,19 +149,20 @@ public class Principal extends Activity {
 								ConsultaRegistros.class);
 						nextScreen.putExtra("respuesta", respuesta);
 						startActivityForResult(nextScreen, resultado);
+						
 					} else if (tipo == 2) {
 
 						Intent nextScreen = new Intent(Principal.this,
-								ConsultaRegistros.class);
+								ModificacionRegistros.class);
 						nextScreen.putExtra("respuesta", respuesta);
 						startActivityForResult(nextScreen, resultado2);
 						
 					} else if (tipo == 3) {
 
 						Intent nextScreen = new Intent(Principal.this,
-								ConsultaRegistros.class);
+								BorradoRegistros.class);
 						nextScreen.putExtra("respuesta", respuesta);
-						startActivityForResult(nextScreen, resultado2);
+						startActivityForResult(nextScreen, resultado3);
 						
 					}
 				}
@@ -164,6 +190,28 @@ public class Principal extends Activity {
 			}
 			if (resultCode == RESULT_CANCELED) {
 				Toast.makeText(Principal.this, "Inserción cancelada",
+						Toast.LENGTH_LONG).show();
+			}
+		}
+		
+		if (requestCode == resultado2) {
+			if (resultCode == RESULT_OK) {
+				Toast.makeText(Principal.this, "Modificacion realizada",
+						Toast.LENGTH_LONG).show();
+			}
+			if (resultCode == RESULT_CANCELED) {
+				Toast.makeText(Principal.this, "Modificacion cancelada",
+						Toast.LENGTH_LONG).show();
+			}
+		}
+		
+		if (requestCode == resultado3) {
+			if (resultCode == RESULT_OK) {
+				Toast.makeText(Principal.this, "Borrado realizado",
+						Toast.LENGTH_LONG).show();
+			}
+			if (resultCode == RESULT_CANCELED) {
+				Toast.makeText(Principal.this, "Borrado cancelado",
 						Toast.LENGTH_LONG).show();
 			}
 		}

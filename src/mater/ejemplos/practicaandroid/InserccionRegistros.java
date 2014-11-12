@@ -38,6 +38,11 @@ public class InserccionRegistros extends Activity {
 		resultado = "{" + dni + nombre + apellidos + direccion + telefono + equipo + "}";
 		Log.d("practica", resultado);
 		
+		String s = "Name: %s";
+		String name = "Bob";
+		
+		Log.e("practica", "Resulto " + String.format(s, name));
+		// Name: Bob
 		Intent intencion = new Intent();
         setResult(RESULT_OK,intencion);
         finish();

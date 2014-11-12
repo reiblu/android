@@ -47,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:focusable="false"
             android:hint="@string/dni" >
 
             <requestFocus />
@@ -73,6 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:focusable="false"
             android:hint="@string/nombre" />
 
     </LinearLayout>
@@ -97,6 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:focusable="false"
             android:hint="@string/apellidos" />
 
     </LinearLayout>
@@ -121,6 +124,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:focusable="false"
             android:hint="@string/direccion" />
 
     </LinearLayout>
@@ -145,6 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:focusable="false"
             android:hint="@string/telefono" />
 
     </LinearLayout>
@@ -169,6 +174,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:focusable="false"
             android:hint="@string/equipo" />
 
     </LinearLayout>

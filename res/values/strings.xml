@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">practica android</string>
+    <string name="titulo">Operaciones servicio web</string>
+    <string name="titulo1">Consulta de Registros</string>
+    <string name="titulo2">Inserccion de Registros</string>
+    <string name="titulo3">Modificacion de Registros</string>
+    <string name="titulo4">Borrado de Registros</string>
+    <string name="registro">Registro</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="direccion">Direccion</string>
+    <string name="telefono">Telefono</string>
+    <string name="equipo">Equipo</string>
+    <string name="dni">DNI</string>
+    <string name="progess_title">Conectando a la base de datos</string>
+    <string name="title_activity_borrado_registros1">BorradoRegistros1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_consulta_registros1">ConsultaRegistros1</string>
+    <string name="title_activity_inserccion_registros1">InserccionRegistros1</string>
+    <string name="title_activity_modificacion_registros1">ModificacionRegistros1</string>
+
+</resources>
